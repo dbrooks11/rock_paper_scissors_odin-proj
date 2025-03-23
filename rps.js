@@ -3,7 +3,7 @@ let humanScore= 0;
 let computerScore=0;
 
 
-console.log(playGame());
+//console.log(playGame());
 
 
 function playRound(humanChoice,
