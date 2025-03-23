@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <script src="rps.js"></script>
+    <link rel = "stylesheet" href = "./styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
@@ -9,17 +10,18 @@
 <body>
     <div class="rps game">
         <h1 class = "rps title">Welcome to Rock, Paper, Scissors!</h1>
-        <h3 id = "rps computer"></h3>
+        <h3 class = "rps computer">The compuer chose: </h3>
      <div class="rps buttons">
-        <button id = "rockButton">Rock</button>
-        <button id = "paperButton">Paper</button>
-        <button id = "scissorsButton">Scissors</button>
+        <button id = "rockButton" class="button">Rock</button>
+        <button id = "paperButton" class="button">Paper</button>
+        <button id = "scissorsButton" class="button">Scissors</button>
      </div>
-    </div>
+   
     <div class = "scoreboard">
-        <h3 id= "score"></h3>
-        <h4 id="winner"></h4>
+        <h3 id= "score">The score is: </h3>
+        <h4 id="winner">The winner is</h4>
     </div>
+</div>
 
 </body>
 </html>

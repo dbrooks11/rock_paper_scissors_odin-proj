@@ -1,0 +1,72 @@
+
+/*game title and buttons*/
+.rps.game{
+background-color: rgb(92, 85, 85);
+border-radius: 20px;
+border: solid black 2px;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 10vw 10vw 10vw 10vw;
+}
+
+.rps.title{
+    text-align: center;
+    padding-top: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+/*computer choice header*/
+.rps.computer{
+    font-size: 20px;
+}
+
+/*rps buttons*/
+*{
+    border: solid red 2px;
+}
+.rps.buttons{
+    display: flex;
+    gap: 40px;
+    padding: 10px;
+    text-align: center;
+   
+    
+}
+
+.button{
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+#rockButton{
+min-width: 80px;
+min-height: 30px;
+}
+
+#paperButton{
+    min-width: 80px;
+    min-height: 30px;
+}
+
+#scissorsButton{
+    min-width: 80px;
+    min-height: 30px;
+}
+
+/*text that displays score and winner*/
+
+.scoreboard{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 40px;
+}
+
+#score{
+
+}
+
+#winner{
+
+}
