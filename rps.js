@@ -1,12 +1,13 @@
 
 let humanScore= 0;
 let computerScore=0;
-
 let choice = " ";
 
 const rockButton = document.querySelector("#rockButton");
 const paperButton = document.querySelector("#paperButton");
 const scissorsButton = document.querySelector("#scissorsButton");
+const bothChose = document.querySelector("#who-chose");
+const pointTo = document.querySelector("#point-to-who");
 
 const score = document.querySelector("#score");
 score.textContent = `Human Score: ${humanScore}  Computer Score: ${computerScore}`;
@@ -37,21 +38,28 @@ scissorsButton.addEventListener("click", ()=>{
 //console.log(playGame());
 
 
-function playRound(humanChoice,
-computerChoice){
+function playRound(humanChoice, computerChoice){
+
     humanChoice = humanChoice.toUpperCase();
     computerChoice = computerChoice.toUpperCase();
+
 if(humanChoice == computerChoice){
-humanScore += 0;
+ bothChose.textContent = "Tie";
+ pointTo.textContent = "No One received points :(";
+ humanScore += 0;
 computerScore += 0;
 } 
 else if((humanChoice == "ROCK" && computerChoice == "SCISSORS") || 
         (humanChoice == "SCISSORS" && computerChoice == "PAPER") || 
         (humanChoice == "PAPER" && computerChoice == "ROCK")){
+            bothChose.textContent = `${humanChoice} beats ${computerChoice}!`;
+            pointTo.textContent = "Human +1 Point!";
             humanScore += 1;
     }
 else{
     computerScore += 1;
+    bothChose.textContent = `${computerChoice} beats ${humanChoice}!`;
+    pointTo.textContent = "Computer +1 Point!";
 }
 }
 
