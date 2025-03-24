@@ -2,6 +2,37 @@
 let humanScore= 0;
 let computerScore=0;
 
+let choice = " ";
+
+const rockButton = document.querySelector("#rockButton");
+const paperButton = document.querySelector("#paperButton");
+const scissorsButton = document.querySelector("#scissorsButton");
+
+const score = document.querySelector("#score");
+score.textContent = `Human Score: ${humanScore}  Computer Score: ${computerScore}`;
+
+const winner = document.querySelector("#winner");
+
+rockButton.addEventListener("click", () => {
+    choice = "Rock";
+    console.log(choice);
+    playGame();
+});
+
+paperButton.addEventListener("click", ()=>{
+    choice = "Paper";
+    console.log(choice);
+    playGame();
+});
+
+scissorsButton.addEventListener("click", ()=>{
+    choice = "Scissors";
+    console.log(choice);
+    playGame();
+});
+
+
+
 
 //console.log(playGame());
 
@@ -10,54 +41,50 @@ function playRound(humanChoice,
 computerChoice){
     humanChoice = humanChoice.toUpperCase();
     computerChoice = computerChoice.toUpperCase();
-    
-
 if(humanChoice == computerChoice){
- return('Tie!');
-}
+humanScore += 0;
+computerScore += 0;
+} 
 else if((humanChoice == "ROCK" && computerChoice == "SCISSORS") || 
         (humanChoice == "SCISSORS" && computerChoice == "PAPER") || 
         (humanChoice == "PAPER" && computerChoice == "ROCK")){
             humanScore += 1;
-    return(`You Won! ${humanChoice} beats ${computerChoice}`);
     }
 else{
     computerScore += 1;
-    return(`You Lost! ${humanChoice} does not beat ${computerChoice}`);
 }
 }
+
+
+const compChoice = document.querySelector("#computer");
 
 function playGame(){
-    const rounds = 5;
-
-   for(let i = 1; i <= rounds; i++){
-    let answer = prompt("Lets Play RPS!\n Enter Rock, Paper, or Scissors!");
+    
     let cpanswer = getComputerChoice();
+    compChoice.textContent = `The Computer Chose: ${cpanswer}`; 
+    playRound(choice, cpanswer);
+    
 
-    if(answer == null){
-        return;
+    score.textContent = `Human Score: ${humanScore}  Computer Score: ${computerScore}`;
+
+    
+    if(humanScore == 5){
+        winner.textContent = "The Winner is: Human!";
+        resetScore();
     }
-
-    console.log(`Round ${i}!`);
-    console.log(`You Chose: ${answer}`);
-    console.log(`Computer Chose: ${cpanswer}`);
-    console.log(playRound(answer,cpanswer));
-    console.log(`Score: Human ${humanScore} Computer ${computerScore}`);
-   }
-
-   if(humanScore > computerScore)
-   console.log("Game Finished. You Won Human!");
-   else if(computerScore > humanScore)
-    console.log("Game Finished. The Computer Won!");
-   else{
-    console.log("Game ended in Tie!");
-   }
-
-   return;
-   
+    else if(computerScore == 5){
+        winner.textContent = "The Winner is: Computer!";
+        resetScore();
+    }
 }
 
 
+function resetScore(){
+
+    humanScore = 0;
+    computerScore= 0;
+    score.textContent = `Human Score: ${humanScore}  Computer Score: ${computerScore}`;
+}
 
 function getComputerChoice(){
     //returns number starting a 1 through 3.
