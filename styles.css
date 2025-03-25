@@ -44,8 +44,15 @@ margin: 10vw 10vw 10vw 10vw;
 .button{
     border: solid black 1px;
     border-radius: 5px;
-   
+    animation: buttons 3s linear;
 }
+
+.button:hover{
+  background-color: rgb(144, 144, 144);;
+        
+ }
+
+
 
 span{
     padding: 10px;
