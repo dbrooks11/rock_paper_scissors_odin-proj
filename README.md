@@ -1,5 +1,3 @@
-# rock_paper_scissors_odin-proj
-
 # Rock Paper Scissors
 
 This is a simple Rock Paper Scissors game built as part of [The Odin Project](https://www.theodinproject.com/) curriculum. The game lets the player choose between rock, paper, or scissors, and plays against a computer opponent that picks randomly.
