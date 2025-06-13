@@ -13,7 +13,7 @@ This is a simple Rock Paper Scissors game built as part of [The Odin Project](ht
 
 ## Live Demo
 
-[View the live demo](https://dbrooks11.github.io/rock-paper-scissors)
+[View the live demo](https://rockpaperscissors-neon.vercel.app/)
 
 ## Technologies Used
 
